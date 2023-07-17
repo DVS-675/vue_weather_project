@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
+
+
+.error {
+  color: red;
+}
+.wrapper {
+  width: 900px;
+  height: 500px;
+  border-radius: 5px;
+  border: 1px solid rgba(9, 9, 9, 0.377);
+  padding: 20px;
+  background: rgba(125, 165, 190, 0.8);
+  text-align: center;
+  color: white;
+}
+
+.title {
+  margin-top: 10px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.subtitle {
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+.wrapper input {
+  font-family: "Montserrat";
+  font-weight: 400;
+  margin-top: 30px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(9, 9, 9, 0.377);
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  padding: rgb(215, 215, 141) 8px;
+  outline: none;
+}
+
+.wrapper input::placeholder {
+  color: rgba(9, 9, 9, 0.377);
+}
+
+.wrapper input:focus {
+  border-bottom-color: black;
+}
+
+.wrapper button:disabled {
+  background: grey;
+  cursor: not-allowed;
+}
+.wrapper button {
+  font-family: "Montserrat";
+  font-weight: 200;
+  background: #444646;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid rgba(9, 9, 9, 0.377);
+  padding: 10px 15px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: transform 500ms ease;
+}
+
+.wrapper button:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+.result_box {
+  margin-top: 80px;
+}
+.result_text {
+  margin-top: 20px;
+  font-family: "Montserrat";
+  font-weight: 200;
+}
+
+.rain {
+  width: 100%;
+  min-height: 100vh;  
+  background-image: url(../../public/rain.jpg);
+  background-size: 100% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    38deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 186, 153, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clouds {
+  width: 100%;
+  min-height: 100vh;  
+  background-image: url(../../public/clouds.jpg);
+  background-size: 100% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sunny {
+  width: 100%;
+  min-height: 100vh;  
+  background-image: url(../../public/sunny.jpg);
+  background-size: 100% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
