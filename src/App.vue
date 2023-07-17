@@ -5,6 +5,7 @@ import "./assets/App.css";
 export default {
   data() {
     return {
+      mainWeather: "",
       city: "",
       error: "",
       info: null,
@@ -32,21 +33,9 @@ export default {
       );
     },
     showMain() {
+      this.mainWeather = this.info.weather[0].main;
+      console.log(this.mainWeather);
       return this.info.weather[0].description;
-    },
-    showImg() {
-      if (
-        this.info.weather[0].main === "Thunderstorm" ||
-        this.info.weather[0].main === "Rain"
-      ) {
-        return "rain";
-      } else if (this.info.weather[0].main === "Clouds") {
-        return "clouds";
-      } else if (this.info.weather[0].main === "Clear") {
-        return "sunny";
-      } else {
-        return "main";
-      }
     },
   },
   methods: {
@@ -68,7 +57,14 @@ export default {
 </script>
 
 <template>
-  <div class="sunny">
+  <div
+    :class="{
+      main: this.mainWeather === '',
+      clouds: this.mainWeather === 'Clouds',
+      sunny: this.mainWeather === 'Clear',
+      rain: this.mainWeather === 'Rain' || this.mainWeather === 'Thunderstorm',
+    }"
+  >
     <div class="wrapper">
       <h1 class="title">Weather App</h1>
       <p class="subtitle">
@@ -85,7 +81,6 @@ export default {
         <p class="result_text">{{ showMinTemp }}</p>
         <p class="result_text">{{ showMaxTemp }}</p>
         <p class="result_text">{{ showMain }}</p>
-        
       </div>
     </div>
   </div>
